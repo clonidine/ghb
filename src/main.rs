@@ -6,7 +6,7 @@ use termion::color;
 
 fn credits() {
     println!(
-        "{}This bot was created by lcly. Check out lcly's GitHub at https://github.com/clonidine.{}",
+        "{}This selfbot was created by lcly. Check out lcly's GitHub at https://github.com/clonidine.{}",
         color::Fg(color::LightBlue),
         color::Fg(color::Reset)
     );

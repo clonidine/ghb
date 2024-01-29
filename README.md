@@ -1,13 +1,13 @@
 # Discord Bulk Message Deletion Selfbot
 
-**WARNING:** The use of selfbots and automated tools to interact with the Discord API may violate Discord's Terms of Service. Use this selfbot responsibly, and be aware that misuse can lead to account suspension or banning. By using this selfbot, you acknowledge the risks and agree that the creator (clonidine) is not responsible for any consequences.
+⚠️ **WARNING:** The use of selfbots and automated tools to interact with the Discord API may violate Discord's Terms of Service. Use this selfbot responsibly, and be aware that misuse can lead to account suspension or banning. By using this selfbot, you acknowledge the risks and agree that the creator (clonidine) is not responsible for any consequences.
 
 
-## Introduction
+## 👀 Introduction
 
 This Discord selfbot allows you to delete multiple messages at once in a specific channel. Before using the selfbot, it's crucial to understand the configuration options in the `config.json` file.
 
-## Configuration
+## 🔧 Configuration
 
 The `config.json` file contains several settings that control how the selfbot behaves. Here's an explanation of each attribute:
 
@@ -21,7 +21,7 @@ The `config.json` file contains several settings that control how the selfbot be
 
 - **delay_seconds**: The selfbot pauses for a specific duration (in seconds) between each round of message deletion. Adjust this to prevent reaching Discord's rate limits.
 
-## Configuration example
+### Configuration example
 
 ```json
 {
@@ -33,11 +33,11 @@ The `config.json` file contains several settings that control how the selfbot be
 }
 ```
 
-## Build Requirements
+## 🔨 Build Requirements
 
 To build this selfbot from source, ensure you have [Rust](https://www.rust-lang.org/) installed on your system.
 
-## Usage
+## 👾 Usage
 
 Follow these steps to use the selfbot:
 

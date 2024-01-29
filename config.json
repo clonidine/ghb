@@ -1,0 +1,7 @@
+{
+    "auth_token": "YOUR_TOKEN",
+    "channel_id": 123,
+    "user_id": 123,
+    "messages_to_delete": 0,
+    "delay_seconds": 0
+}

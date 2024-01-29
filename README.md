@@ -1,4 +1,4 @@
-# Discord Bulk Message Deletion Selfbot
+# 🤖 Discord Bulk Message Deletion Selfbot
 
 ⚠️ **WARNING:** The use of selfbots and automated tools to interact with the Discord API may violate Discord's Terms of Service. Use this selfbot responsibly, and be aware that misuse can lead to account suspension or banning. By using this selfbot, you acknowledge the risks and agree that the creator (clonidine) is not responsible for any consequences.
 

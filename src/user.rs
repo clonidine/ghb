@@ -1,7 +1,7 @@
+use color_eyre::owo_colors::OwoColorize;
 use reqwest::header::{HeaderMap, AUTHORIZATION};
 use serde_json::Value;
 use std::time::Duration;
-use termion::color;
 
 use crate::cat;
 
@@ -85,18 +85,16 @@ impl User {
                         for message_id in &message_ids {
                             if let Err(err) = self.delete_message(channel_id, message_id).await {
                                 eprintln!(
-                                    "{}Error deleting message{} {}: {:?}",
-                                    color::Fg(color::Red),
-                                    color::Fg(color::Reset),
-                                    message_id,
-                                    err
+                                    "{} {}: {:?}",
+                                    "Error deleting message".red(),
+                                    message_id.white(),
+                                    err.red()
                                 );
                             } else {
                                 println!(
-                                    "{}Message deleted{}: {}",
-                                    color::Fg(color::LightMagenta),
-                                    color::Fg(color::Reset),
-                                    message_id
+                                    "{}: {}",
+                                    "Message deleted".bright_magenta(),
+                                    message_id.white()
                                 );
                             }
                         }
@@ -105,23 +103,17 @@ impl User {
                     }
                 }
                 Err(err) => {
-                    eprintln!(
-                        "{}Error retrieving messages{}: {:?}",
-                        color::Fg(color::Red),
-                        color::Fg(color::Reset),
-                        err
-                    );
+                    eprintln!("{}: {:?}", "Error retrieving messages".red(), err.red());
                     has_more_messages = false;
                 }
             }
 
             println!();
             println!(
-                "{}Waiting {}{}{}s...",
-                color::Fg(color::Red),
-                color::Fg(color::LightMagenta),
-                delay_seconds,
-                color::Fg(color::Red)
+                "{} {}{}",
+                "Waiting".red(),
+                delay_seconds.bright_magenta(),
+                "...".red()
             );
             tokio::time::sleep(Duration::from_secs(delay_seconds)).await;
             println!()

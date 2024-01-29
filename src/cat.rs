@@ -1,11 +1,7 @@
-use termion::color;
+use color_eyre::owo_colors::OwoColorize;
 
 pub fn print_giant_cat() {
-    println!("{}   /\\_/\\", color::Fg(color::LightMagenta));
-    println!("{}  ( o.o )", color::Fg(color::LightMagenta));
-    println!(
-        "{}   > ^ <{}",
-        color::Fg(color::LightMagenta),
-        color::Fg(color::Reset)
-    );
+    println!("{}", "/\\_/\\".bright_magenta());
+    println!("{}", "( o.o )".bright_magenta());
+    println!("{}", "> ^ <{}".bright_magenta(),);
 }

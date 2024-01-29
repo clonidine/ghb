@@ -4,8 +4,18 @@ pub mod user;
 
 use termion::color;
 
+fn credits() {
+    println!(
+        "{}This bot was created by lcly. Check out lcly's GitHub at https://github.com/clonidine.{}",
+        color::Fg(color::LightBlue),
+        color::Fg(color::Reset)
+    );
+}
+
 #[tokio::main]
 async fn main() {
+    credits();
+
     let config_content = match std::fs::read_to_string("config.json") {
         Ok(content) => content,
         Err(_) => {
@@ -41,5 +51,8 @@ async fn main() {
     )
     .await;
 
+    tokio::time::sleep(tokio::time::Duration::from_secs(5)).await;
+    println!();
+    println!();
     cat::print_giant_cat();
 }
